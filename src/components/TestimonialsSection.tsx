@@ -49,44 +49,44 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="depoimentos" className="py-20 bg-secondary/20">
+    <section id="depoimentos" className="py-12 sm:py-16 lg:py-20 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             O Que Nossos Clientes Dizem
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
             Mais de 1.000 clientes confiaram em nosso trabalho. 
             Conheça alguns depoimentos e resultados alcançados.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border">
-              <CardContent className="p-6">
+            <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card border-border will-change-transform">
+              <CardContent className="p-4 sm:p-6">
                 <div className="mb-4">
-                  <Quote className="h-8 w-8 text-primary/20" />
+                  <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-primary/20" />
                 </div>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed text-sm sm:text-base">
                   "{testimonial.content}"
                 </p>
                 
                 <div className="flex items-center mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
                 
                 <div className="border-t border-border pt-4">
-                  <div className="font-semibold text-card-foreground">
+                  <div className="font-semibold text-card-foreground text-sm sm:text-base">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-muted-foreground mb-2">
+                  <div className="text-xs sm:text-sm text-muted-foreground mb-2">
                     {testimonial.role}
                   </div>
-                  <div className="text-sm text-primary font-medium">
+                  <div className="text-xs sm:text-sm text-primary font-medium">
                     ✓ {testimonial.result}
                   </div>
                 </div>

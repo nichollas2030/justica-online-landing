@@ -9,6 +9,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { BackToTopButton } from "@/components/BackToTopButton";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -29,14 +30,17 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <ScrollProgress />
       <Header />
-      <main>
+      <main className="relative">
         <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <TestimonialsSection />
-        <ContactSection />
+        <div className="relative">
+          <ServicesSection />
+          <AboutSection />
+          <TestimonialsSection />
+          <ContactSection />
+        </div>
       </main>
       <Footer />
       <WhatsAppButton />

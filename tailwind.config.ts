@@ -13,10 +13,23 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem',
 			screens: {
+				'xs': '475px',
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
+		},
+		screens: {
+			'xs': '475px',
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px',
 		},
 		extend: {
 			colors: {
@@ -63,6 +76,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			scale: {
+				'102': '1.02',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -111,7 +127,9 @@ export default {
 		}
 	},
 	plugins: [
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
 		require("tailwindcss-animate"),
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		function({ addUtilities }: any) {
 			addUtilities({
 				'.hover-scale': {

@@ -1,0 +1,25 @@
+# Additional security headers for production
+
+/*
+  X-Robots-Tag: index, follow
+  X-Permitted-Cross-Domain-Policies: none
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+# Specific headers for API endpoints (if any)
+/api/*
+  Access-Control-Allow-Origin: https://advocaciadireito.com.br
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization
+
+# Security for form submissions
+/contact
+  X-Frame-Options: DENY
+  
+# Additional security for admin-like paths
+/wp-admin/*
+  X-Robots-Tag: noindex, nofollow
+  
+/.well-known/*
+  X-Robots-Tag: noindex, nofollow

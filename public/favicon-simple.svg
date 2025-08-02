@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+  <rect width="16" height="16" rx="2" fill="#1E40AF"/>
+  <!-- Scale of Justice Icon -->
+  <g transform="translate(2, 2)" fill="white">
+    <!-- Center pole -->
+    <rect x="5.5" y="1" width="1" height="11" rx="0.5"/>
+    <!-- Base -->
+    <rect x="3" y="11" width="6" height="1" rx="0.5"/>
+    <!-- Top bar -->
+    <rect x="2" y="2" width="8" height="0.8" rx="0.4"/>
+    <!-- Left scale -->
+    <circle cx="3.5" cy="5" r="1.5" stroke="white" stroke-width="0.5" fill="none"/>
+    <rect x="2" y="6" width="3" height="0.5" rx="0.25"/>
+    <!-- Right scale -->
+    <circle cx="8.5" cy="5" r="1.5" stroke="white" stroke-width="0.5" fill="none"/>
+    <rect x="7" y="6" width="3" height="0.5" rx="0.25"/>
+  </g>
+</svg>

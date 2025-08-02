@@ -55,7 +55,7 @@ export const ContactSection = () => {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(11) 3456-7890\n(11) 99999-9999"
+      content: "(11) 3456-7890\n(11) 98765-4321 (WhatsApp)"
     },
     {
       icon: Mail,
@@ -70,28 +70,28 @@ export const ContactSection = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-background">
+    <section id="contato" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Entre em Contato
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0">
             Agende sua consulta gratuita e descubra como podemos ajudar a resolver 
             suas questões jurídicas com eficiência e dedicação.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <Card className="bg-card border-border">
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-card-foreground">
+            <CardHeader className="p-4 sm:p-6">
+              <CardTitle className="text-xl sm:text-2xl font-semibold text-card-foreground">
                 Solicite uma Consulta
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <CardContent className="p-4 sm:p-6 pt-0">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -185,19 +185,19 @@ export const ContactSection = () => {
           </Card>
 
           {/* Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="bg-card border-border hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-full">
-                      <info.icon className="h-6 w-6 text-primary" />
+              <Card key={index} className="bg-card border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 will-change-transform">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="p-2 sm:p-3 bg-primary/10 rounded-full flex-shrink-0">
+                      <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-card-foreground mb-2">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-semibold text-card-foreground mb-2 text-sm sm:text-base">
                         {info.title}
                       </h3>
-                      <p className="text-muted-foreground whitespace-pre-line leading-relaxed">
+                      <p className="text-muted-foreground whitespace-pre-line leading-relaxed text-sm sm:text-base break-words">
                         {info.content}
                       </p>
                     </div>
@@ -209,10 +209,10 @@ export const ContactSection = () => {
             {/* Map Placeholder */}
             <Card className="bg-card border-border">
               <CardContent className="p-0">
-                <div className="h-64 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                    <p className="text-muted-foreground">
+                <div className="h-48 sm:h-64 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-lg flex items-center justify-center">
+                  <div className="text-center px-4">
+                    <MapPin className="h-8 w-8 sm:h-12 sm:w-12 text-primary mx-auto mb-3 sm:mb-4" />
+                    <p className="text-muted-foreground text-sm sm:text-base">
                       Mapa interativo disponível<br />
                       na versão publicada
                     </p>
