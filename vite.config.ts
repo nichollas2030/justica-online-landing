@@ -7,6 +7,14 @@ export default defineConfig(() => ({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      // Define o token para o WebSocket HMR
+      clientPort: 8080,
+    },
+  },
+  define: {
+    // Define variáveis globais para evitar erros de referência
+    __WS_TOKEN__: JSON.stringify(process.env.WS_TOKEN || 'vite-hmr'),
   },
   plugins: [react()],
   resolve: {

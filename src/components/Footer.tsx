@@ -12,9 +12,9 @@ export const Footer = () => {
   ];
 
   const legalLinks = [
-    { label: "Política de Privacidade", href: "#" },
-    { label: "Termos de Uso", href: "#" },
-    { label: "Cookies", href: "#" },
+    { label: "Política de Privacidade", href: "#privacidade", id: "privacy" },
+    { label: "Termos de Uso", href: "#termos", id: "terms" },
+    { label: "Cookies", href: "#cookies", id: "cookies" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -77,7 +77,7 @@ export const Footer = () => {
             <h3 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Informações Legais</h3>
             <ul className="space-y-2">
               {legalLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.id}>
                   <a
                     href={link.href}
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm hover:underline"
