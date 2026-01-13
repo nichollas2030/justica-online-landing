@@ -8,7 +8,7 @@ export const AboutSection = () => {
       icon: Clock,
       number: "15+",
       label: "Anos de Experiência",
-      description: "Tradição e confiança"
+      description: "Tradição e confiança com o mercado"
     },
     {
       icon: Users,
